@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:300&display=swap"
+      rel="stylesheet"
+    />
+    <title>Patrick Murphy</title>
+  </head>
+  <body>
+    <section class="section section-landing" id="section-landing">
+      <div class="container container--center">
+        <p class="landing-title">
+          Hello, I'm
+          <span class="landing-title--colored">Patrick Murphy</span>.
+          <br />
+          I'm a web developer.
+        </p>
+        <button
+          class="btn btn--large btn--inner-shadow"
+          onclick="onMyWorkClick()"
+          onmouseover="buttonArrowHover(true)"
+          onmouseout="buttonArrowHover(false)"
+        >
+          My work
+          <img
+            id="landing-button-arrow"
+            class="btn__img"
+            src="https://img.icons8.com/material-rounded/24/000000/down.png"
+          />
+        </button>
+      </div>
+    </section>
+    <section class="section" id="section-about">
+      <div class="container container--center container--row">
+        <div class="container container--center">
+          <p>Image</p>
+          <p>
+            Description
+          </p>
+          <div class="container container--row container--start">
+            <ul>
+              <li>
+                List 1 item one.
+              </li>
+              <li>
+                List 1 item two.
+              </li>
+            </ul>
+            <ul>
+              <li>List 2 item 1</li>
+              <li>List 2 item 2</li>
+              <li>List 2 item 3</li>
+            </ul>
+          </div>
+        </div>
+        <div class="container container--center container--row">
+          <p>row item #1</p>
+          <p>row item #2</p>
+        </div>
+      </div>
+    </section>
+    <script src="javascript.js"></script>
+    <script src="scrollAnimations.js"></script>
+  </body>
+</html>

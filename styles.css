@@ -1,0 +1,108 @@
+body {
+  --primary-text-color: white;
+  --secondary-color: #a29bfe;
+  --primary-background-color: #252525;
+  --secondary-background-color: white;
+  --secondary-text-color: black;
+  margin: 0;
+}
+
+body,
+input,
+textarea,
+button {
+  font-family: "Montserrat", sans-serif;
+}
+
+/* Animations  */
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100vw);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.slide-in-right {
+  animation: 1s ease-out 0s 1 slideInFromRight;
+}
+
+.slide-in-right--onvisible.animate-visible {
+  animation: 1s ease-out 0s 1 slideInFromRight;
+}
+
+/* LANDING CSS */
+
+.btn__img {
+  transform: rotate(-90deg);
+  transition-duration: 0.3s;
+}
+
+.btn__img--down {
+  transform: none;
+  transition-duration: 0.3s;
+}
+
+.btn {
+  background-color: var(--secondary-color);
+  border: none;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.btn--large {
+  font-size: 36px;
+}
+
+.btn--inner-shadow {
+  box-shadow: inset 0 4px 4px #0000003b;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.container--center {
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.container--row {
+  flex-direction: row;
+}
+
+.container--start {
+  align-items: flex-start;
+}
+
+.landing-title {
+  margin: 0.5em;
+  text-align: center;
+  font-size: 64px;
+  color: var(--primary-text-color);
+}
+
+.landing-title--colored {
+  color: var(--secondary-color);
+}
+
+.section {
+  height: 100vh;
+}
+
+.section-landing {
+  background-color: var(--primary-background-color);
+}
+
+/* About Section */
+
+.section-about {
+  background-color: var(--secondary-background-color);
+  color: var(--secondary-text-color);
+}
