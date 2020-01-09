@@ -1,9 +1,11 @@
 function buttonArrowHover(isHovered) {
-  let arrow = document.getElementById("landing-button-arrow");
-  if (isHovered) {
-    arrow.classList.add("btn__img--down");
-  } else {
-    arrow.classList.remove("btn__img--down");
+  let arrow = document.getElementById("landing__button-arrow");
+  if (arrow !== null) {
+    if (isHovered) {
+      arrow.classList.add("btn__img--down");
+    } else {
+      arrow.classList.remove("btn__img--down");
+    }
   }
 }
 

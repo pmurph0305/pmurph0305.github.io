@@ -1,32 +1,25 @@
-let scrollAnimation =
-  window.requestAnimationFrame ||
-  function(callback) {
-    window.setTimeout(callback, 16);
-  };
+let options = {
+  root: null,
+  rootMargin: "0px",
+  threshold: [0.1, 0.75]
+};
+
+let observerCallback = (entries, observer) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("animate-visible");
+    }
+  });
+};
+
+let observer = new IntersectionObserver(observerCallback);
 
 let scrollElements = document.querySelectorAll(".animate-on-scroll");
-function onScrollElements() {
-  scrollElements.forEach(element => {
-    if (isElementInViewport(element)) {
-      element.classList.add("animate-visible");
-    } else {
+scrollElements.forEach(element => {
+  observer.observe(element);
+  element.addEventListener("animationend", function() {
+    if (element.classList.contains("reanimate")) {
       element.classList.remove("animate-visible");
     }
   });
-  scrollAnimation(onScrollElements);
-}
-onScrollElements();
-
-function isElementInViewport(element) {
-  let rect = element.getBoundingClientRect();
-  return (
-    (rect.top <= 0 && rect.bottom >= 0) ||
-    (rect.bottom >=
-      (window.innerHeight || document.documentElement.clientHeight) &&
-      rect.top <=
-        (window.innerHeight || document.documentElement.clientHeight)) ||
-    (rect.top >= 0 &&
-      rect.bottom <=
-        (window.innerHeight || document.documentElement.clientHeight))
-  );
-}
+});

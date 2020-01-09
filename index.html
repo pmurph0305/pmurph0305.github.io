@@ -6,19 +6,21 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <!-- CSS -->
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="animations.css" />
     <!-- Fonts -->
     <link
       href="https://fonts.googleapis.com/css?family=Montserrat:300&display=swap"
       rel="stylesheet"
     />
+    <script src="https://kit.fontawesome.com/ff860d439e.js" crossorigin="anonymous"></script>
     <title>Patrick Murphy</title>
   </head>
   <body>
-    <section class="section section-landing" id="section-landing">
+    <section class="section section--landing" id="section__landing">
       <div class="container container--center">
-        <p class="landing-title">
+        <p class="landing__title">
           Hello, I'm
-          <span class="landing-title--colored">Patrick Murphy</span>.
+          <span class="landing__title--colored">Patrick Murphy</span>.
           <br />
           I'm a web developer.
         </p>
@@ -29,40 +31,88 @@
           onmouseout="buttonArrowHover(false)"
         >
           My work
-          <img
-            id="landing-button-arrow"
-            class="btn__img"
-            src="https://img.icons8.com/material-rounded/24/000000/down.png"
-          />
+          <span class="btn__icon-span">
+          <i class="fas fa-arrow-down btn__img" id="landing__button-arrow"></i>
+        </span>
         </button>
       </div>
     </section>
-    <section class="section" id="section-about">
-      <div class="container container--center container--row">
-        <div class="container container--center">
-          <p>Image</p>
-          <p>
-            Description
-          </p>
-          <div class="container container--row container--start">
-            <ul>
-              <li>
-                List 1 item one.
-              </li>
-              <li>
-                List 1 item two.
-              </li>
-            </ul>
-            <ul>
-              <li>List 2 item 1</li>
-              <li>List 2 item 2</li>
-              <li>List 2 item 3</li>
-            </ul>
+    <section class="section section--about" id="section-about">
+      <div class="container container--center">
+        <div class="about__outer-grid">
+          <div class="about__left-grid slide-in-left animate-on-scroll">
+            <img class="about__img" src="./self-photo.jpg">
+            <p>
+              I’m a front-end web developer from Aurora, ON.
+  I enjoy building fast, responsive, and accessible websites. I love solving problems, and learning new things.
+            </br></br>
+  I know I don’t know everything, but I know that I can figure it out. 
+            </p>
+            <div class="about__lists">
+              <ul class="ul-flat">
+                <li class="li-title">
+                  EDUCATION
+                </li>
+                <li class="li-item">
+                  University of Guelph </br>
+                  BSc. Physical Sciences
+                </li>
+                <li class="li-item">
+                  freeCodeCamp </br>
+                  Full Stack Certification
+                </li>
+              </ul>
+              <ul class="ul-flat">
+                <li class="li-title">
+                  SKILLS
+                </li>
+                <li class="li-item">
+                  HTML / CSS
+                </li>
+                <li class="li-item">
+                  Javascript
+                </li>
+                <li class="li-item">
+                  React
+                </li>
+                <li class="li-item">
+                  React Native
+                </li>
+                <li class="li-item">
+                  Node.js
+                </li>
+                <li class="li-item">
+                  Express
+                </li>
+                <li class="li-item">
+                  SQL Databases
+                </li>
+              </ul>
+            </div>
           </div>
-        </div>
-        <div class="container container--center container--row">
-          <p>row item #1</p>
-          <p>row item #2</p>
+          <div class="about__extras slide-in-right animate-on-scroll">
+            <div class="about__item-container slide-in-top animate-on-scroll">
+              <span class="about__item-circle">
+                <i class="fas fa-tachometer-alt about__item-icon"></i>
+              </span>
+              <p class="about__item-title">FAST</p>
+              <p class="about__item-desc">Websites with quick load times and instant interaction.</p>
+            </div>
+            <div class="about__item-container">
+              <span class="about__item-circle">
+                <i class="fas fa-mobile-alt about__item-icon"></i>
+              </span>
+              <p class="about__item-title">RESPONSIVE</p>
+              <p class="about__item-desc">Designs that work on any screen size.</p>
+            </div>
+            <div class="about__item-container about__extras--fullrow slide-in-bottom animate-on-scroll">
+              <span class="about__item-circle">
+                <i class="fas fa-universal-access about__item-icon"></i>
+              </span>
+              <p class="about__item-title">ACCESSIBLE</p>
+              <p class="about__item-desc">Sites that can be used by anyone, regardless of ability.</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
