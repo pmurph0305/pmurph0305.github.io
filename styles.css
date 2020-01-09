@@ -31,6 +31,11 @@ section {
   color: var(--secondary-text-color);
 }
 
+.section--web {
+  background-color: var(--primary-background-color);
+  color: var(--primary-text-color);
+}
+
 /* Buttons */
 
 .btn {
@@ -89,6 +94,7 @@ section {
 
 .li-title {
   color: var(--secondary-color);
+  font-weight: bolder;
 }
 
 .li-item {
@@ -182,4 +188,49 @@ section {
 .about__extras--fullrow {
   grid-column-start: 1;
   grid-column-end: 3;
+}
+
+/* Web CSS */
+
+.web__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 33%);
+  grid-template-rows: repeat(2, auto);
+  grid-gap: 2em;
+  justify-content: center;
+  align-content: center;
+}
+
+.project__item-grid {
+  padding: 1em;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-gap: 1em;
+}
+
+.project__item-grid:hover {
+  position: relative;
+  transform: scale(1.2);
+  background-color: #2a2a2a;
+  box-shadow: 0 2px 0 2px rgba(0, 0, 0, 0.233);
+  z-index: 1000;
+  transition: all 0.5s;
+}
+
+.project__img {
+  justify-self: center;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+}
+
+.project__text {
+  margin: 0;
+}
+
+.project__text--title {
+  color: var(--secondary-color);
+  font-size: 1.5em;
+  margin-bottom: 0.5em;
+  font-weight: bolder;
 }
