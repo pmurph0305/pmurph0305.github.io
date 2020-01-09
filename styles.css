@@ -1,9 +1,10 @@
 body {
   --primary-text-color: white;
+  --secondary-text-color: black;
   --secondary-color: #a29bfe;
+  --secondary-color-dark: #5f5b98;
   --primary-background-color: #252525;
   --secondary-background-color: rgb(230, 230, 230);
-  --secondary-text-color: black;
   margin: 0;
   overflow-x: hidden;
 }
@@ -29,6 +30,7 @@ section {
 .section--about {
   background-color: var(--secondary-background-color);
   color: var(--secondary-text-color);
+  min-height: 720px;
 }
 
 .section--web {
@@ -93,8 +95,9 @@ section {
 }
 
 .li-title {
-  color: var(--secondary-color);
+  color: var(--secondary-color-dark);
   font-weight: bolder;
+  font-size: 1.25em;
 }
 
 .li-item {
