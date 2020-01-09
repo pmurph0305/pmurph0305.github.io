@@ -19,7 +19,7 @@ button {
 /* Sections */
 
 section {
-  padding: 2em;
+  padding: 1vh;
   height: 100vh;
 }
 
@@ -30,7 +30,6 @@ section {
 .section--about {
   background-color: var(--secondary-background-color);
   color: var(--secondary-text-color);
-  min-height: 720px;
 }
 
 .section--web {
@@ -134,7 +133,6 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 250px;
 }
 
 .about__item-circle {
@@ -165,15 +163,17 @@ section {
 .about__outer-grid {
   display: grid;
   grid-template: "about extra" / 20% 50%;
+
+  grid-gap: 1em;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
 }
 
 .about__left-grid {
   display: grid;
   grid-gap: 10px;
   grid-template-rows: repeat(3, auto);
+  grid-template-columns: minmax(0, 1fr);
   align-items: center;
   justify-items: center;
 }
@@ -186,10 +186,9 @@ section {
 .about__extras {
   display: grid;
   grid-gap: 10px;
-  grid-template-rows: repeat(2, auto);
-  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(2, 250px);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   justify-items: center;
-  align-items: center;
 }
 
 .about__extras--fullrow {
@@ -248,4 +247,63 @@ section {
 .project__item-grid--light:hover {
   background-color: #dadada;
   box-shadow: 0 2px 2px 0 rgba(134, 134, 134, 0.233);
+}
+
+/* Medium screen media queries */
+@media only screen and (max-width: 1200px) {
+  .about__outer-grid {
+    grid-template: "about extra" / 30% 60%;
+  }
+  .about__item-circle {
+    width: min(150px, 15vw);
+    height: min(150px, 15vw);
+  }
+  .about__item-icon {
+    font-size: min(5em, 10vw);
+  }
+  .about__img {
+    width: min(200px, 15vw);
+    height: min(200px, 15vw);
+  }
+  .about__item-title {
+    font-size: 1.3em;
+  }
+
+  .web__grid {
+    grid-template-columns: repeat(2, 40%);
+    grid-template-rows: repeat(2, auto);
+  }
+  .project__img {
+    width: min(150px, 20vw);
+    height: min(150px, 20vw);
+  }
+}
+
+/* Small screen media queries */
+@media only screen and (max-width: 800px) {
+  .section {
+    height: fit-content;
+    min-height: 0;
+  }
+  .section--landing {
+    height: 100vh;
+  }
+  .about__outer-grid {
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+  }
+  .about__extras {
+    grid-template-rows: repeat(2, auto);
+  }
+  .about__img {
+    width: min(200px, 25vw);
+    height: min(200px, 25vw);
+  }
+  .web__grid {
+    display: flex;
+    flex-direction: column;
+    padding: 2em;
+  }
 }
