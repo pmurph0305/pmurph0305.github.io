@@ -38,6 +38,10 @@ section {
   color: var(--primary-text-color);
 }
 
+.section--game {
+  background-color: var(--secondary-background-color);
+}
+
 /* Buttons */
 
 .btn {
@@ -212,10 +216,9 @@ section {
 }
 
 .project__item-grid:hover {
-  position: relative;
   transform: scale(1.2);
   background-color: #2a2a2a;
-  box-shadow: 0 2px 0 2px rgba(0, 0, 0, 0.233);
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.233);
   z-index: 1000;
   transition: all 0.5s;
 }
@@ -236,4 +239,13 @@ section {
   font-size: 1.5em;
   margin-bottom: 0.5em;
   font-weight: bolder;
+}
+
+.project__text--title-dark {
+  color: var(--secondary-color-dark);
+}
+
+.project__item-grid--light:hover {
+  background-color: #dadada;
+  box-shadow: 0 2px 2px 0 rgba(134, 134, 134, 0.233);
 }
