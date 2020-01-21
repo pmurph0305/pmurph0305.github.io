@@ -41,6 +41,10 @@ section {
   background-color: var(--secondary-background-color);
 }
 
+.section__title {
+  font-size: 2em;
+}
+
 /* Buttons */
 
 .btn {
@@ -95,6 +99,12 @@ section {
   list-style: none;
   padding: 0;
   margin: 1em;
+}
+
+.ul-flat--split {
+  columns: 2;
+  border-left: 1px solid rgba(0, 0, 0, 0.2);
+  padding-left: 1em;
 }
 
 .li-title {
@@ -163,7 +173,6 @@ section {
 .about__outer-grid {
   display: grid;
   grid-template: "about extra" / 20% 50%;
-
   grid-gap: 1em;
   justify-content: center;
   align-items: center;
