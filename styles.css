@@ -207,6 +207,14 @@ section {
   align-content: center;
 }
 
+.web__grid--2 {
+  display: grid;
+  grid-template-columns: repeat(2, 33%);
+  grid-gap: 2em;
+  justify-content: center;
+  align-content: center;
+}
+
 .project__item-grid {
   padding: 1em;
   display: grid;
@@ -214,8 +222,15 @@ section {
   grid-gap: 1em;
 }
 
+.project__item--full-center {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  width: 50%;
+  justify-self: center;
+}
+
 .project__item-grid:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
   background-color: #2a2a2a;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.233);
   z-index: 1000;
@@ -227,6 +242,11 @@ section {
   width: 150px;
   height: 150px;
   object-fit: cover;
+}
+
+.project__link {
+  text-decoration: none;
+  color: inherit;
 }
 
 .project__text {
