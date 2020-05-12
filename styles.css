@@ -16,6 +16,22 @@ button {
   font-family: "Montserrat", sans-serif;
 }
 
+/* footer contact */
+.footer {
+  background-color: var(--primary-background-color);
+  text-align: center;
+}
+
+.contact-link {
+  color: var(--primary-text-color);
+}
+
+.contact-container {
+  margin: 0;
+  padding: 2em;
+  color: var(--primary-text-color);
+}
+
 /* Sections */
 
 section {
