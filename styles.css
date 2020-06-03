@@ -37,6 +37,8 @@ button {
 section {
   padding: 1em;
   min-height: 100vh;
+  display: flex;
+  align-items: center;
 }
 
 .section--landing {
