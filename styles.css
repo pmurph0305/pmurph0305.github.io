@@ -39,6 +39,7 @@ section {
   min-height: 100vh;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .section--landing {
@@ -227,6 +228,15 @@ section {
 }
 
 /* Web CSS */
+
+.web__grid--1 {
+  display: grid;
+  grid-template-columns: repeat(1, 33%);
+  grid-template-rows: repeat(1, auto);
+  grid-gap: 2em;
+  justify-content: center;
+  align-content: center;
+}
 
 .web__grid {
   display: grid;
